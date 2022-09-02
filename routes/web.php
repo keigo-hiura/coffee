@@ -21,4 +21,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/list', function () {
+    return view('coffee.list');
+})->middleware(['auth'])->name('list');
+
+Route::get('/mocha', function () {
+    return view('coffee_product.mocha');
+})->middleware(['auth'])->name('mocha');
+
 require __DIR__.'/auth.php';
