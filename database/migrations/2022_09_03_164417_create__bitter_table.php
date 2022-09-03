@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        // coffeeの各詳細カテゴリ
-        Schema::create('coffee', function (Blueprint $table) {
+        Schema::create('bitter', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('bitter');
-            $table->string('sweet');
-            $table->string('rich');
-            $table->string('acidity');
+            $table->string('bitter')->comment('苦味');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coffee');
+        Schema::dropIfExists('bitter');
     }
 };
