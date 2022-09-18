@@ -28,7 +28,7 @@ Route::get('/list', function () {
     return view('coffee.list');
 })->middleware(['auth'])->name('list');
 
-
+//crud機能のルート作成
 Route::resource('post', PostController::class);
 
 

@@ -125,6 +125,10 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //投稿内容の破棄
+        $post = $this->post->findOrFail($id);
+
+        $post->delete($id);
+        return redirect()->route('post.index');
     }
 }

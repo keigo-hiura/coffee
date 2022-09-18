@@ -12,7 +12,7 @@
             </div>
 
             {{-- 詳細記事更新 --}}
-
+            <div class="container">
             <form action="{{ route('post.update',$post->id) }}" method="post">
                 @csrf
                 @method('put')
@@ -39,6 +39,7 @@
             </div>
             </div>
             </form>
+            </div>
         </div>
     </section>
 
