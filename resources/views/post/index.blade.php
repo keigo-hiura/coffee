@@ -18,6 +18,7 @@
                         <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
                             @foreach ($posts as $post)
 
+                            <div class="row text-center">
                             <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                             <span class="mt-1 text-gray-500 text-sm">{{ $post->created_at }}</span>
                             </div>
@@ -31,10 +32,12 @@
                             {{-- 各idで詳細表示や編集、削除が出来る--}}
                             <form action="{{ route('post.destroy',$post->id) }}" method="post">
                             @csrf
+                            @method('delete')
                             <a href="{{ route('post.show',$post->id) }}">詳細表示</a>
                             <a href="{{ route('post.edit',$post->id) }}">編集</a>
                             <button type="submit">削除する</button>
                             </form>
+                            </div>
                             @endforeach
                         </div>
                     </div>
