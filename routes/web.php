@@ -29,21 +29,6 @@ Route::get('/list', function () {
 })->middleware(['auth'])->name('list');
 
 
-//記事一覧
-
-// Route::group(['prefix' => 'post'], function() {
-//     //crud機能
-
-//     Route::get('/index', [PostController::class,'index'])->name('index');
-//     Route::get('/create', [PostController::class,'create'])->name('create');
-//     Route::post('/store',[PostController::class,'store'])->name('store');
-//     Route::get('/show/{id}', [PostController::class,'show'])->name('show');
-//     Route::get('/edit/{id}', [PostController::class,'edit'])->name('edit');
-//     Route::post('/update', [PostController::class,'update'])->name('update');
-//     Route::get('/destroy', [PostController::class,'destroy'])->name('destroy');
-
-// });
-
 Route::resource('post', PostController::class);
 
 
