@@ -1,12 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            おすすめのコーヒー豆を紹介します！
+            コーヒー豆検索！
         </h2>
     </x-slot>
 
-        <form action="#" method="post">
+        <form action="#" method="GET">
             @csrf
+
             <section class="text-gray-600 body-font">
                 <div class="container px-5 py-24 mx-auto">
                     <div class="flex flex-col text-center w-full mb-12">
@@ -19,10 +20,9 @@
                             <label for="name" class="leading-7 text-sm text-gray-600 text-center">苦味</label>
                             <div class="p-2 w-1/2">
                                 <div class="relative">
-                                    <select name="test">
-                                        <option value="test1">弱い</option>
-                                        <option value="test2">普通</option>
-                                        <option value="test3">強い</option>
+                                    <select name="bitter" data-toggle="select">
+                                        <option value="">全て</option>
+
                                     </select>
                                 </div>
                             </div>
@@ -32,10 +32,9 @@
                             <label for="name" class="leading-7 text-sm text-gray-600 text-center">甘味</label>
                             <div class="p-2 w-1/2">
                                 <div class="relative">
-                                    <select name="test">
-                                        <option value="test1">弱い</option>
-                                        <option value="test2">普通</option>
-                                        <option value="test3">強い</option>
+                                    <select name="sweet" data-toggle="select">
+                                        <option value="">全て</option>
+
                                     </select>
                                 </div>
                             </div>
@@ -45,10 +44,9 @@
                             <label for="name" class="leading-7 text-sm text-gray-600 text-center">酸味</label>
                             <div class="p-2 w-1/2">
                                 <div class="relative">
-                                    <select name="test">
-                                        <option value="test1">弱い</option>
-                                        <option value="test2">普通</option>
-                                        <option value="test3">強い</option>
+                                    <select name="acidity" data-toggle="select">
+                                        <option value="">全て</option>
+
                                     </select>
                                 </div>
                             </div>
@@ -58,17 +56,18 @@
                             <label for="name" class="leading-7 text-sm text-gray-600 text-center">コク</label>
                             <div class="p-2 w-1/2">
                                 <div class="relative">
-                                    <select name="test">
-                                        <option value="test1">弱い</option>
-                                        <option value="test2">普通</option>
-                                        <option value="test3">強い</option>
+                                    <select name="rich" data-toggle="select">
+                                        <option value="">全て</option>
+
                                     </select>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mx-auto">
-                        <button type="submit" onclick="location.href={{ route('dashboard') }}" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">検索</button>
+                        <div>
+                            <input type="submit" class="btn flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded mr-2" value="検索">
+                        </div>
                         </div>
 
                     </div>

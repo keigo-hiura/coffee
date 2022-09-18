@@ -8,8 +8,8 @@
     <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap -m-4">
+            {{-- 商品１ --}}
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-
                 <div class="block relative h-48 rounded overflow-hidden">
                 <div class="w-36 mx-auto">
                 <a href="{{ route('mocha') }}">
@@ -18,100 +18,107 @@
                 </div>
                 </div>
                 <div class="mt-4">
-                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-
+                <h2 class="text-gray-900 title-font text-lg font-medium">モカ</h2>
                 </div>
             </div>
 
+            {{-- 商品２ --}}
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                <a class="block relative h-48 rounded overflow-hidden">
+                <div class="block relative h-48 rounded overflow-hidden">
                 <div class="w-36 mx-auto">
-                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
-                </div>
+                <a href="{{ route('kilimanjaro') }}">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
                 </a>
+                </div>
+                </div>
                 <div class="mt-4">
-                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
-                <p class="mt-1">$21.15</p>
+                <h2 class="text-gray-900 title-font text-lg font-medium">キリマンジャロ</h2>
                 </div>
             </div>
 
+            {{-- 商品３ --}}
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                <a class="block relative h-48 rounded overflow-hidden">
+                <div class="block relative h-48 rounded overflow-hidden">
                 <div class="w-36 mx-auto">
-                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
-                </div>
+                <a href="{{ route('mountain') }}">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
                 </a>
+                </div>
+                </div>
                 <div class="mt-4">
-                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
-                <p class="mt-1">$12.00</p>
+                <h2 class="text-gray-900 title-font text-lg font-medium">ブルーマウンテン</h2>
                 </div>
             </div>
 
+            {{-- 商品４--}}
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                <a class="block relative h-48 rounded overflow-hidden">
+                <div class="block relative h-48 rounded overflow-hidden">
                 <div class="w-36 mx-auto">
-                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
-                </div>
+                <a href="{{ route('kona') }}">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
                 </a>
+                </div>
+                </div>
                 <div class="mt-4">
-                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
-                <p class="mt-1">$18.40</p>
+                <h2 class="text-gray-900 title-font text-lg font-medium">コナ</h2>
                 </div>
             </div>
 
+            {{-- 商品５ --}}
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                <a class="block relative h-48 rounded overflow-hidden">
+                <div class="block relative h-48 rounded overflow-hidden">
                 <div class="w-36 mx-auto">
-                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
-                </div>
+                <a href="{{ route('guatemala') }}">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
                 </a>
+                </div>
+                </div>
                 <div class="mt-4">
-                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-                <p class="mt-1">$16.00</p>
+                <h2 class="text-gray-900 title-font text-lg font-medium">グアテマラ</h2>
                 </div>
             </div>
 
+            {{-- 商品６ --}}
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                <a class="block relative h-48 rounded overflow-hidden">
+                <div class="block relative h-48 rounded overflow-hidden">
                 <div class="w-36 mx-auto">
-                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
-                </div>
+                <a href="{{ route('brazil') }}">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
                 </a>
+                </div>
+                </div>
                 <div class="mt-4">
-                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
-                <p class="mt-1">$21.15</p>
+                <h2 class="text-gray-900 title-font text-lg font-medium">ブラジル</h2>
                 </div>
             </div>
 
+            {{-- 商品７ --}}
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                <a class="block relative h-48 rounded overflow-hidden">
+
+                <div class="block relative h-48 rounded overflow-hidden">
                 <div class="w-36 mx-auto">
-                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
-                </div>
+                <a href="{{ route('toraja') }}">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
                 </a>
+                </div>
+                </div>
                 <div class="mt-4">
-                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
-                <p class="mt-1">$12.00</p>
+                <h2 class="text-gray-900 title-font text-lg font-medium">トラジャ</h2>
                 </div>
             </div>
 
+            {{-- 商品８ --}}
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                <a class="block relative h-48 rounded overflow-hidden">
+
+                <div class="block relative h-48 rounded overflow-hidden">
                 <div class="w-36 mx-auto">
-                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
-                </div>
+                <a href="{{ route('jawa') }}">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{ asset('images/cafe_coffee_bag.png') }}">
                 </a>
+                </div>
+                </div>
                 <div class="mt-4">
-                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
-                <p class="mt-1">$18.40</p>
+                <h2 class="text-gray-900 title-font text-lg font-medium">ジャワコーヒー</h2>
                 </div>
             </div>
 
