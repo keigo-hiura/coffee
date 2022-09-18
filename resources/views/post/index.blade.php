@@ -9,7 +9,7 @@
         <section class="text-gray-600 body-font">
             <div class="container px-5 py-24 mx-auto">
 
-                <a href="{{ route('post.create') }}" class="btn flex mx-auto  mb-24 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg ">記事を投稿する</a>
+                <a href="{{ route('post.create') }}" class="btn btn-info">記事を投稿する</a>
 
                 <div class="card">
                     <div class="card-body">
@@ -33,7 +33,7 @@
                             <form action="{{ route('post.destroy',$post->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <a href="{{ route('post.show',$post->id) }}">詳細表示</a>
+                            <a href="{{ route('post.show',$post->id) }}" class="btn btn-info">詳細表示</a>
                             <a href="{{ route('post.edit',$post->id) }}">編集</a>
                             <button type="submit">削除する</button>
                             </form>
