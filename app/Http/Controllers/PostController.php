@@ -61,7 +61,7 @@ class PostController extends Controller
         //投稿内容を保存する
         $this->post->save();
 
-        return redirect()->route('index');
+        return redirect()->route('post.index');
     }
 
     /**
@@ -70,11 +70,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    
-    public function show($id){
-        $post_details = $this->post->findOrFail($id);
 
-        return view('post.show')->with('post_details', $post_details);
+    public function show($id){
+        $post = $this->post->findOrFail($id);
+
+        return view('post.show')->with('post', $post);
     }
 
     /**
@@ -86,9 +86,9 @@ class PostController extends Controller
     public function edit($id)
     {
 
-        $post_edit = $this->post->findOrFail($id);
+        $post = $this->post->findOrFail($id);
 
-        return view('post.edit')->with('post_edit', $post_edit);
+        return view('post.edit')->with('post', $post);
     }
 
     /**
@@ -100,7 +100,20 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //バリデーションの設定
+        $request->validate([
+            'name' => 'required|min:1|max:50',
+            'content' => 'required|min:1|max:180',
+        ]);
+
+        $post = $this->post->findOrFail($id);
+
+        $post->name= $request->name;
+        $post->content= $request->content;
+
+        //投稿内容を保存する
+        $post->save();
+        return redirect()->route('post.index');
 
     }
 

@@ -18,18 +18,18 @@
                 <div class="p-2 w-full">
                 <div class="relative">
                     <label for="name" class="leading-7 text-lg">コーヒー名</label>
-                    <input type="text" id="name" name="name" value="{{ $post_details->name }}"  placeholder="コーヒー名を記入してください！" class="w-full rounded">
+                    <input type="text" id="name" name="name" value="{{ $post->name }}"  placeholder="コーヒー名を記入してください！" class="w-full rounded">
                 </div>
                 </div>
 
                 <div class="p-2 w-full">
                 <div class="relative">
                     <label for="content" class="leading-7 text-lg">内容</label>
-                    <textarea id="content" name="content" class="w-full py-16 rounded" placeholder="内容を記入してください！">{{ $post_details->content }}</textarea>
+                    <textarea id="content" name="content" class="w-full py-16 rounded" placeholder="内容を記入してください！">{{ $post->content }}</textarea>
                 </div>
                 </div>
                 <div class="p-2 w-full">
-                <a href="{{ route('index') }}" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">一覧に戻る</a>
+                <a href="{{ route('post.index') }}" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">一覧に戻る</a>
                 </div>
             </div>
             </div>

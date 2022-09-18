@@ -28,25 +28,23 @@ Route::get('/list', function () {
     return view('coffee.list');
 })->middleware(['auth'])->name('list');
 
-//記事を表示
-// Route::get('/article', function () {
-//     return view('post.article');
-// })->middleware(['auth'])->name('article');
 
 //記事一覧
 
-Route::group(['prefix' => 'post'], function() {
-    //crud機能
+// Route::group(['prefix' => 'post'], function() {
+//     //crud機能
 
-    Route::get('/index', [PostController::class,'index'])->name('index');
-    Route::get('/create', [PostController::class,'create'])->name('create');
-    Route::post('/store',[PostController::class,'store'])->name('store');
-    Route::get('/show/{id}', [PostController::class,'show'])->name('show');
-    Route::get('/edit/{id}', [PostController::class,'edit'])->name('edit');
-    Route::post('/update', [PostController::class,'update'])->name('update');
-    Route::get('/destroy', [PostController::class,'destroy'])->name('destroy');
+//     Route::get('/index', [PostController::class,'index'])->name('index');
+//     Route::get('/create', [PostController::class,'create'])->name('create');
+//     Route::post('/store',[PostController::class,'store'])->name('store');
+//     Route::get('/show/{id}', [PostController::class,'show'])->name('show');
+//     Route::get('/edit/{id}', [PostController::class,'edit'])->name('edit');
+//     Route::post('/update', [PostController::class,'update'])->name('update');
+//     Route::get('/destroy', [PostController::class,'destroy'])->name('destroy');
 
-});
+// });
+
+Route::resource('post', PostController::class);
 
 
 Route::get('/serch', function () {

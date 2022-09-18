@@ -12,7 +12,7 @@
             </div>
 
             {{-- 投稿 --}}
-            <form action="{{ route('store') }}" method="post">
+            <form action="{{ route('post.store') }}" method="post">
                 @csrf
             <div class="lg:w-1/2 md:w-2/3 mx-auto">
             <div class="flex flex-wrap -m-2">
