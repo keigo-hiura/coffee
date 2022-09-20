@@ -5,47 +5,60 @@
         </h2>
     </x-slot>
 
+
     <div class="my-5">
-        <section class="text-gray-600 body-font">
+        <section class="body-font">
             <div class="container px-5 py-24 mx-auto">
-
-                <a href="{{ route('post.create') }}" class="btn btn-info">記事を投稿する</a>
-
+                <div class="row">
+                <a href="{{ route('post.create') }}" class="btn btn-info col-2 ">記事を投稿する</a>
+                </div>
                 <div class="card">
                     <div class="card-body">
-                    <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10  sm:flex-row flex-col">
+                    <div class="items-center lg:w-3/5 mx-auto border-b pb-10 mb-10  sm:flex-row flex-col">
 
-                        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                            @foreach ($posts as $post)
+                        <div class="flex-grow sm:text-left mt-6 sm:mt-0">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <div class="row">
+                                            <th scope="col-3">投稿日時</th>
+                                            <th scope="col-3">タイトル</th>
+                                            <th scope="col-3">投稿内容</th>
+                                            <th scope="col-3"></th>
+                                        </div>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($posts as $post)
+                                    <tr>
+                                        {{-- 投稿日時 --}}
+                                        <th><span class="mt-1 text-gray-500 text-sm">{{ $post->created_at }}</span></th>
 
-                            <div class="row text-center">
-                            <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                            <span class="mt-1 text-gray-500 text-sm">{{ $post->created_at }}</span>
-                            </div>
+                                        {{-- 見出し --}}
+                                        <td><h2 class="text-gray-900 text-lg title-font font-medium mb-2">{{ $post->name }}</h2></td>
 
-                            {{-- 見出し --}}
-                            <h2 class="text-gray-900 text-lg title-font font-medium mb-4">タイトル：{{ $post->name }}</h2>
+                                        {{-- 内容 --}}
+                                        <td><p class="leading-relaxed text-base mb-4">{{ $post->content }}</p></td>
 
-                            {{-- 内容 --}}
-                            <p class="leading-relaxed text-base mb-10">投稿内容：{{ $post->content }}</p>
-
-                            {{-- 各idで詳細表示や編集、削除が出来る--}}
-                            <form action="{{ route('post.destroy',$post->id) }}" method="post">
-                            @csrf
-                            @method('delete')
-                            <a href="{{ route('post.show',$post->id) }}" class="btn btn-info">詳細表示</a>
-                            <a href="{{ route('post.edit',$post->id) }}">編集</a>
-                            <button type="submit">削除する</button>
-                            </form>
-                            </div>
-                            @endforeach
+                                        {{-- 各idで詳細表示や編集、削除が出来る--}}
+                                        <form action="{{ route('post.destroy',$post->id) }}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                            <td><a href="{{ route('post.show',$post->id)}}" class="btn btn-info"><i class="fa-solid fa-book-open"></i>詳細表示</a></td>
+                                            <td><a href="{{ route('post.edit',$post->id) }}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i>編集</a></td>
+                                            <td><button type="submit button" class="btn btn-danger"><i class="fa-solid fa-trash"></i>削除</button></td>
+                                        </form>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     </div>
                 </div>
 
             </div>
-            </section>
+        </section>
     </div>
 
 

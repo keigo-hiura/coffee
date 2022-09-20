@@ -15,13 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('welcome');});
 
 //ダッシュボードに飛ぶ
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+    return view('dashboard');})
+->middleware(['auth'])->name('dashboard');
 
 //一覧表示
 Route::get('/list', function () {
