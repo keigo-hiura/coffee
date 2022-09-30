@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\FortuneController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,11 +31,9 @@ Route::get('/list', function () {
 //crud機能のルート作成
 Route::resource('post', PostController::class);
 
+//コーヒーみくじのルート
 
-Route::get('/serch', function () {
-    return view('coffee.serch');
-})->middleware(['auth'])->name('serch');
-
+Route::post('fortune', [FortuneController::class,'fortune'])->name('fortune');
 
 
 Route::group(['prefix' => 'detail'], function() {
