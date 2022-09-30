@@ -10,13 +10,13 @@
         <section class="body-font">
             <div class="container px-5 py-24 mx-auto">
                 <div class="row">
-                <a href="{{ route('post.create') }}" class="btn btn-info col-2 ">記事を投稿する</a>
+                <a href="{{ route('post.create') }}" class="btn btn-primary col-2 mx-auto">記事を投稿する</a>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                    <div class="items-center lg:w-3/5 mx-auto border-b pb-10 mb-10  sm:flex-row flex-col">
+                    <div class=" mx-auto border-b pb-10 mb-10">
 
-                        <div class="flex-grow sm:text-left mt-6 sm:mt-0">
+                        <div class="mt-6">
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -44,9 +44,11 @@
                                         <form action="{{ route('post.destroy',$post->id) }}" method="post">
                                         @csrf
                                         @method('delete')
-                                            <td><a href="{{ route('post.show',$post->id)}}" class="btn btn-info"><i class="fa-solid fa-book-open"></i>詳細表示</a></td>
-                                            <td><a href="{{ route('post.edit',$post->id) }}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i>編集</a></td>
-                                            <td><button type="submit button" class="btn btn-danger"><i class="fa-solid fa-trash"></i>削除</button></td>
+                                            <td>
+                                                <a href="{{ route('post.show',$post->id)}}" class="btn btn-info"><i class="fa-solid fa-book-open"></i>詳細表示</a>
+                                                <a href="{{ route('post.edit',$post->id) }}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i>編集</a>
+                                                <button type="submit button" class="btn btn-danger"><i class="fa-solid fa-trash"></i>削除</button>
+                                            </td>
                                         </form>
                                     </tr>
                                     @endforeach
