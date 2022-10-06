@@ -7,7 +7,7 @@
 
         <form action="{{ route('fortune') }}" method="POST">
             @csrf
-            
+
                 <div class="container px-5 py-24 mx-auto">
                     <div class="flex flex-col text-center mb-12">
                     <h1 class="mb-4">本日のおすすめのコーヒー</h1>
@@ -17,7 +17,7 @@
                     <div class="flex mx-auto px-8">
                         <div class="mx-auto">
                         <div>
-                            <input type="submit" class="btn btn-success" name="btn" value="おみくじを引く">
+                            <input type="submit" class="btn bg-success" name="btn" value="おみくじを引く">
                         </div>
                         </div>
 
