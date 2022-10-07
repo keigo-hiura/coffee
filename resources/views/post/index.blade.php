@@ -8,7 +8,7 @@
 
     <div class="my-5">
         <section class="body-font">
-            <div class="container px-5 py-24 mx-auto">
+            <div class="container-fluid px-5 py-24 mx-auto">
                 <div class="row">
                 <a href="{{ route('post.create') }}" class="btn btn-primary col-2 mx-auto">記事を投稿する</a>
                 </div>
@@ -39,6 +39,9 @@
 
                                         {{-- 内容 --}}
                                         <td><p class="leading-relaxed text-base mb-4">{{ $post->content }}</p></td>
+
+
+                                        <td><img src="{{ asset($post->img_path) }}" alt="{{ $post->img_path }}"></td>
 
                                         {{-- 各idで詳細表示や編集、削除が出来る--}}
                                         <form action="{{ route('post.destroy',$post->id) }}" method="post">
