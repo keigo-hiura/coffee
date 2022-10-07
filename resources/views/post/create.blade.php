@@ -12,7 +12,7 @@
             </div>
 
             {{-- 投稿 --}}
-            <form action="{{ route('post.store') }}" method="post">
+            <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
             <div class="lg:w-1/2 md:w-2/3 mx-auto">
             <div class="flex flex-wrap -m-2">
@@ -29,6 +29,9 @@
                     <textarea id="content" name="content" value="content" class="w-full py-16 rounded" placeholder="内容を記入してください！"></textarea>
                 </div>
                 </div>
+                
+                <input type="file" name="img_path">
+
                 <div class="p-2 w-full">
                 <button type="submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">投稿する</button>
                 </div>
