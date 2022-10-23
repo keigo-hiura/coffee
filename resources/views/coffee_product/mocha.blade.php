@@ -19,8 +19,13 @@
             <div class="flex mb-4">
 
             </div>
-            <p class="leading-relaxed">あああああ</p>{{-- 説明文 --}}
+            <p class="leading-relaxed">モカには爽やかな酸味があり、最大の特徴とも言えます。</p>
 
+            <p>柑橘系のフルーツのような爽やかな酸味です。</p>
+
+            <p>モカには爽やかな酸味の中にも独特の甘みやコクが感じ、人気の品種です。</p>{{-- 説明文 --}}
+
+            
             <div class="flex">
 
             <a class="btn flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded mr-2" href="https://www.amazon.co.jp/s?k=%E3%83%A2%E3%82%AB&crid=3B10I9NDLIJR3&sprefix=%E3%82%82%E3%81%8B%2Caps%2C326&ref=nb_sb_ss_pltr-ranker-opsacceptance_3_2"><i class="fa-brands fa-amazon mr-2">アマゾンで購入</i></a>{{-- アマゾン --}}
