@@ -5,25 +5,30 @@
         </h2>
     </x-slot>
 
-        <form action="{{ route('fortune') }}" method="POST">
-            @csrf
+    <div class="card mx-auto mt-5" style="width: 30rem">
+        <div class="card-body">
 
-                <div class="container px-5 py-24 mx-auto">
-                    <div class="flex flex-col text-center mb-12">
-                    <h1 class="mb-4">本日のおすすめのコーヒー</h1>
-                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">ボタンを押してください</p>
-                    </div>
+                <div class="px-5 py-8 mx-auto">
+
+                    <p class="h1 font-large text-center card-title">コーヒーみくじ</p>
+
+                    <p class="card-text text-center py-5">今日のコーヒーを自動でチョイスします</p>
 
                     <div class="flex mx-auto px-8">
                         <div class="mx-auto">
-                        <div>
-                            <input type="submit" class="btn bg-success" name="btn" value="おみくじを引く">
-                        </div>
+                            <form action="{{ route('fortune') }}" method="POST">
+                            @csrf
+                                <div>
+                                    <input type="submit" class="btn bg-danger text-white" name="btn" value="おみくじを引く">
+                                </div>
+                            </form>
                         </div>
 
                     </div>
                 </div>
 
-        </form>
+        </div>
+    </div>
+
 
 </x-app-layout>
