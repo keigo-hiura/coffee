@@ -8,7 +8,7 @@
     <section class="text-gray-600 body-font relative">
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-12">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">kizi！</h1>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">個別記事</h1>
             </div>
 
             {{-- 詳細表示 --}}
@@ -18,14 +18,14 @@
                 <div class="p-2 w-full">
                 <div class="relative">
                     <label for="name" class="leading-7 text-lg">コーヒー名</label>
-                    <input type="text" id="name" name="name" value="{{ $post->name }}"  placeholder="コーヒー名を記入してください！" class="w-full rounded">
+                    <p class="h1">{{ $post->name }}</p>
                 </div>
                 </div>
 
                 <div class="p-2 w-full">
                 <div class="relative">
                     <label for="content" class="leading-7 text-lg">内容</label>
-                    <textarea id="content" name="content" class="w-full py-16 rounded" placeholder="内容を記入してください！">{{ $post->content }}</textarea>
+                    <p class="h1">{{ $post->content }}</p>
                 </div>
                 </div>
                 <div class="p-2 w-full">

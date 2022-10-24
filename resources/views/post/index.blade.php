@@ -14,17 +14,17 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                    <div class=" mx-auto border-b pb-10 mb-10">
+                    <div class=" mx-auto pb-10 mb-10">
 
                         <div class="mt-6">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <div class="row">
-                                            <th scope="col-3">投稿日時</th>
-                                            <th scope="col-3">タイトル</th>
-                                            <th scope="col-3">投稿内容</th>
-                                            <th scope="col-3"></th>
+                                            <th class="col-3">投稿日時</th>
+                                            <th class="col-3">タイトル</th>
+                                            <th class="col-3">投稿内容</th>
+
                                         </div>
                                     </tr>
                                 </thead>
@@ -41,7 +41,7 @@
                                         <td><p class="leading-relaxed text-base mb-4">{{ $post->content }}</p></td>
 
 
-                                        <td><img src="{{ asset($post->img_path) }}" alt="{{ $post->img_path }}"></td>
+                                        {{--  <td><img src="{{ asset($post->img_path) }}" alt="{{ $post->img_path }}"></td>  --}}
 
                                         {{-- 各idで詳細表示や編集、削除が出来る--}}
                                         <form action="{{ route('post.destroy',$post->id) }}" method="post">
