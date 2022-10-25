@@ -52,26 +52,26 @@ class PostController extends Controller
         $request->validate([
             'name' => 'required|min:1|max:50',
             'content' => 'required|min:1|max:180',
-            'img_path' => 'mimes:jpg,jpeg,png,gif|max:1048'
+            // 'img_path' => 'mimes:jpg,jpeg,png,gif|max:1048'
         ]);
         //ディレクトリ名
-        $dir = "images";
-        //アップロードされたファイル名を取得
-        $filename = $request->file('img_path')->getClientOriginalName();
-        //取得したファイル名で保存
-        $request->file('img_path')->storeAs('public/' . $dir,$filename);
+        // $dir = "images";
+        // //アップロードされたファイル名を取得
+        // $filename = $request->file('img_path')->getClientOriginalName();
+        // //取得したファイル名で保存
+        // $request->file('img_path')->storeAs('public/' . $dir,$filename);
 
         //ファイルをデータベースに保存
-        $image = new Post();
-        $image->name = $filename;
-        $image->path = 'storage/' . $dir . '/' . $filename;
-        $image->save();
+        // $image = new Post();
+        // $image->name = $filename;
+        // $image->path = 'storage/' . $dir . '/' . $filename;
+        // $image->save();
 
 
         //各項目をデータベースに登録
         $this->post->name = $request->name;
         $this->post->content = $request->content;
-        $this->post->img_path = $request->img_path;
+        // $this->post->img_path = $request->img_path;
 
 
         //投稿内容を保存する
@@ -127,7 +127,7 @@ class PostController extends Controller
 
         $post->name= $request->name;
         $post->content= $request->content;
-        $post->img_path = $request->img_path;
+        
 
         //投稿内容を保存する
         $post->save();
