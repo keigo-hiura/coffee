@@ -1,0 +1,44 @@
+
+
+.banner {
+    height: 600px;
+    background-image: url(../images/banner-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.banner-text {
+    color: aliceblue;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.banner-text h2 {
+    font-size: 50px;
+    color: coral;
+}
+
+.fortune-title h2 {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 30px;
+}
+
+.fortune-title p {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 20px;
+}
+
+.fortune-title hr {
+    border: 1px solid brown;
+
+}
+
+
+
+
