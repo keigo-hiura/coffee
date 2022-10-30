@@ -1,10 +1,24 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            コーヒーみくじ
+            <span style="color:coral">Coffee Bean Online</span>
         </h2>
     </x-slot>
 
+    <div class="container-fluid">
+    <div class="banner">
+        <div class="banner-text">
+            <h2>コーヒーはいかが？</h2>
+            <p>このサイトでは自動でコーヒー選びや購入</p>
+            <p>自分のお気に入りのコーヒーを投稿することができます！</p>
+        </div>
+    </div>
+
+    <div class="fortune-title">
+        <h2>コーヒーみくじ</h2>
+        <p>本日のコーヒーを選びます！</p>
+        <hr>
+    </div>
     <div class="card mx-auto mt-5" style="width: 30rem">
         <div class="card-body">
 
@@ -29,6 +43,6 @@
 
         </div>
     </div>
-
+    </div>
 
 </x-app-layout>
