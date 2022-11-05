@@ -1,5 +1,7 @@
 
 
+
+
 .banner {
     height: 600px;
     background-image: url(../images/banner-bg.jpeg);
@@ -26,6 +28,7 @@
     margin-top: 2em;
     text-align: center;
     font-size: 30px;
+    font-weight: bold;
 }
 
 .fortune-title p {
@@ -36,8 +39,63 @@
 
 .fortune-title hr {
     border: 1px solid brown;
+    /*hrを中央揃え*/
+    margin: auto;
+    width: 50%;
+}
+
+.card-body p{
+    font-weight: bold;
+}
+
+.list-title h2 {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.list-title p {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 20px;
+}
+
+.list-title hr {
+    border: 1px solid brown;
+    /*hrを中央揃え*/
+    margin: auto;
+    width: 50%;
+}
+
+.coffee-items {
+    display: flex;
+    align-items:stretch;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin: auto;
 
 }
+
+.item img{
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+}
+
+.item p {
+    text-align: center;
+    padding: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
 
 
 
