@@ -75,14 +75,14 @@
 }
 
 .item {
-    margin: auto;
-
+    width: 25%;
 }
 
 .item img{
     width: 300px;
     height: 300px;
     border-radius: 20%;
+    margin: auto;
 }
 
 .item p {
@@ -92,6 +92,110 @@
     margin-bottom: 2em;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.footer-title {
+    text-align: center;
+    width: 100%;
+}
+
+.footer-title h2 {
+    margin-top: 2em;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.footer-title p {
+    margin-top: 1em;
+    font-size: 20px;
+}
+
+.footer-title hr {
+    border: 1px solid brown;
+    /*hrを中央揃え*/
+    margin: auto;
+    width: 50%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer span {
+    font-weight: bold;
+}
+
+.footer-detail {
+    display: flex;
+    align-items:stretch;
+    flex-wrap: wrap;
+}
+
+.profile {
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    padding: 50px;
+}
+
+.profile h2 {
+    font-size: 30px;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.profile img {
+    width: 50%;
+    height: 200px;
+    margin-bottom: 1em;
+}
+
+.profile  p {
+    font-size: 20px;
+    width: 300px;
+    margin-bottom: 1em;
+}
+
+.site-detail {
+    /* border: 4px solid red; */
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    padding: 50px;
+}
+
+.site-detail h2 {
+    font-size: 30px;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.site-detail p {
+    font-size: 20px;
+    margin-bottom: 1em;
+}
+
+.contact {
+    /* border: 4px solid red; */
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    padding: 50px;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.copyright {
+    text-align: center;
+    justify-content: center;
+}
+
+.contact btn {
+    width: 100%;
+}
+
 
 
 
