@@ -30,6 +30,7 @@
                         <p class="card-text text-center py-5">今日のコーヒーを自動でチョイスします</p>
                         <div class="flex mx-auto px-4">
                             <div class="mx-auto">
+                                {{-- コーヒーみくじをボタンでクリックで起動 --}}
                                 <form action="{{ route('fortune') }}" method="POST">
                                 @csrf
                                     <div>
@@ -45,7 +46,7 @@
         {{-- コーヒーリストのタイトル --}}
         <div class="list-title mb-5">
             <h2>コーヒーリスト</h2>
-            <p>お取り扱いのコーヒーはこちら！</p>
+            <p>紹介しているコーヒーはこちら！</p>
             <hr>
         </div>
 
@@ -85,11 +86,48 @@
                 </div>
             </div>
 
-            
+                {{-- フッターの作成 --}}
+                <div class="footer-title mb-5">
+                        <h2>このサイトとは</h2>
+                        <p>サイト作成者や作った理由、お問合せフォームが下記にあります！</p>
+                        <hr>
+                </div>
 
-
+                <div class="footer">
+                    <div class="footer-detail">
+                        {{-- 個人プロフィール --}}
+                        <div class="profile">
+                            <h2>プロフィール</h2>
+                            <img src="{{ asset('images/profile.jpeg') }}" alt="自分の写真">
+                            <p><span>名前</span>:日浦敬悟</p>
+                            <p><span>経歴</span>:現在、大学4年生で休学中にプログラミングを学び、自分で考えたことを実現できる仕組みに惹かれ、現在IT業界に就職したいと考えています。</p>
+                        </div>
+                        {{-- サイトを作成した理由->サイトの説明 --}}
+                        <div class="site-detail">
+                            <h2>サイトの説明</h2>
+                            <p><span>作成した理由</span>：友人から違うコーヒーの味を適当に選んでくれるサービスが欲しいと聞いたことから。</p>
+                            <p><span>できること</span>:コーヒーの品種をランダムで選んだり、このサイトから直接amazonやYahooで購入できたり、ユーザー同士でオススメの品種を紹介できるサイトです。</p>
+                        </div>
+                        {{-- お問合せフォームの設置 --}}
+                        <div class="contact">
+                            <h2>お問合せ</h2>
+                            <form action="#" method="post" class="margin-bottom:10px;">
+                                <label for="name"><span>名前</span>：</label><br>
+                                <input type="text" name="name" id="name" placeholder="名前"><br>
+                                <label for="email"><span>メールアドレス</span>：</label><br>
+                                <input type="email" name="email" id="email" placeholder="メールアドレス"><br>
+                                <label for="title"><span>件名</span>：</label><br>
+                                <input type="text" name="title" id="title" placeholder="件名"><br>
+                                <label for="content"><span>内容</span>：</label><br>
+                                <textarea name="content" id="content" cols="30" rows="10" placeholder="お問い合わせ内容"></textarea><br>
+                                <input type="submit" class="btn bg-danger text-white" name="btn" value="送信">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {{-- サイトの著作権 --}}
+                <div class="copyright">
+                    ©️2022 Keigo
+                </div>
     </div>
-
-
-
 </x-app-layout>
